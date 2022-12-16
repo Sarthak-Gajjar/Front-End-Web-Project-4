@@ -1,17 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PlaceHolder</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>STICKY NOTES</title>
     <link rel="stylesheet" href="main.css">
     <script src="main.js" defer></script>
+    <script defer crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script defer crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script defer src="https://unpkg.com/pocketbase@0.8.1/dist/pocketbase.umd.js"></script>
+
 </head>
 <body>
     <div class="header">
         <button type="button" class="add-sticky">Add Sticky Note</button>
-        
+        <p> "Double-Click to delete any existing Sticky-Notes!"
+	</p>
     </div>
     <div class="sticky-board">
         <!--

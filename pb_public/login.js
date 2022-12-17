@@ -25,7 +25,7 @@ form.addEventListener("submit", async (event) => {
     console.log("[LOGIN.JS] pb.authStore", pb.authStore);
 
     // redirect to index page
-    // window.location.replace("http://localhost:3000/");
+    window.location.replace("http://localhost:3000/");
   } catch (error) {
     alert(error);
     email.value = "";

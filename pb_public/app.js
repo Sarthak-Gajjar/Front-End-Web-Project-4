@@ -1,5 +1,5 @@
-const USERNAME = "SarthakGajjar@csu.fullerton.edu";
-const PASSWORD = "SarthakGajjar";
+const USERNAME = "sarthakgajjar@csu.fullerton.edu";
+const PASSWORD = "pass123@123";
 const pb = new PocketBase("http://127.0.0.1:8090");
 const authData = await pb.admins.authWithPassword(USERNAME, PASSWORD);
 console.log(authData);

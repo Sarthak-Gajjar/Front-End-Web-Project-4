@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sign Up</title>
+    <script type="module" src="signup.js" defer></script>
+    <link rel="stylesheet" href="main.css">
+    <script defer src="https://unpkg.com/pocketbase@0.8.1/dist/pocketbase.umd.js"></script>
+
+</head>
+
+<body class="min-h-screen flex items-center justify-center">
+    <div class="space-y-6">
+        <div class="space-y-6">
+            <h1 class="text-6xl font-bold">Sign Up</h1>
+            <form id="signup-form" class="space-y-4">
+                <input id="email" name="email" type="text" placeholder="email"
+                    class="bg-gray-200 border border-gray-400 px-2 py-1 rounded-md" />
+                <input id="password" name="password" type="password" placeholder="password"
+                    class="bg-gray-200 border border-gray-400 px-2 py-1 rounded-md" />
+                <input id="passwordConfirm" name="passwordConfirm" type="password" placeholder="confirm password"
+                    class="bg-gray-200 border border-gray-400 px-2 py-1 rounded-md" />
+                <input type="submit"
+                    class="bg-blue-500 py-2 px-4 rounded-md text-white font-medium cursor-pointer hover:bg-blue-700" />
+            </form>
+        </div>
+        <p>Already have an account? <a href="/login.html" class="text-blue-500 hover:underline">Log In →</a></p>
+    </div>
+</body>
+
+</html>

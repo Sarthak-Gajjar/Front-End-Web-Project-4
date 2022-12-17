@@ -1,5 +1,25 @@
+import PocketBase from "https://unpkg.com/pocketbase@0.8.3/dist/pocketbase.es.mjs";
+
+const pb = new PocketBase("http://127.0.0.1:8090");
+
+// check if user is authenticated
+if (!pb.authStore.isValid) {
+  console.log("not signed in, redirecting to login");
+  window.location.replace("http://localhost:3000/login.html");
+} else {
+  console.log("authenticated: true");
+}
+
+const pbListener = pb.authStore.onChange((isValid) => {
+  console.log("token validity changed...");
+  if (!isValid) {
+    window.location.replace("http://localhost:3000/login.html");
+  }
+});
+
 const btnAddSticky = document.getElementById("stickyBtn");
 const stickyBoard = document.getElementById("sticky-board");
+const logoutBtn = document.getElementById("logout");
 
 function createStickyElement() {
   //creating Elements for HTML
@@ -33,6 +53,10 @@ btnAddSticky.addEventListener("click", () => {
   });
   //Append sticky to sticky board
   stickyBoard.appendChild(sticky);
+});
+
+logoutBtn.addEventListener("click", () => {
+  pb.authStore.clear();
 });
 
 function getRandomColor() {

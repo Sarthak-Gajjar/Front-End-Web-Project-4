@@ -7,10 +7,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>STICKY NOTES</title>
-    <script src="main.js" defer></script>
+    <script defer src="https://unpkg.com/pocketbase@0.8.1/dist/pocketbase.umd.js"></script>
+    <script type="module" src="index.js" defer></script>
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="stickies.css">
-    <script defer src="https://unpkg.com/pocketbase@0.8.1/dist/pocketbase.umd.js"></script>
 
 </head>
 
@@ -20,6 +20,8 @@
             class="py-3 px-2 text-sm bg-blue-500 cursor-pointer text-white rounded-md hover:bg-blue-700">Add Sticky
             Note</button>
         <p class="font-bold underline">Double-Click to delete any existing Sticky-Notes!</p>
+        <button id="logout" type="button"
+            class="py-3 px-2 text-sm bg-red-500 cursor-pointer text-white rounded-md hover:bg-red-700">Log Out</button>
     </div>
     <div id="sticky-board" class="grid gap-4 p-4 overflow-y-auto bg-[#444] grid-cols-5 auto-rows-[250px] min-h-screen">
         <!--

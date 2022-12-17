@@ -5,3 +5,9 @@
 - Clemente Solorio
 - Ramiro Aispuro
 - Sarthak Gajjar
+
+# Admin Account:
+
+**email**: `g21@p4.com`
+
+**password**: `group21@project4`

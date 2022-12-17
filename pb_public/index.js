@@ -7,7 +7,7 @@ if (!pb.authStore.isValid) {
   console.log("not signed in, redirecting to login");
   window.location.replace("http://localhost:3000/login.html");
 } else {
-  console.log("authenticated: true");
+  console.log("[INDEX.JS] authStore:", pb.authStore);
 }
 
 const pbListener = pb.authStore.onChange((isValid) => {
